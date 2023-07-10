@@ -4,60 +4,78 @@
 
 <title> LocalHost:INHA </title>
 
+
 <head>
+    <script src="index.js" defer></script>
+    <script>
+        function goHome() {
+           window.location.href = "index2.html";
+         }
+     </script>
 <style>
-body {margin:0;}
+body {
+  margin:0;
+}
 
 
 /* 내비게이션 바 설정 */
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    position: fixed;    
-    top: 0;
-    width: 100%
+a{
+    text-decoration:none;
+    color: #ddd;
 }
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#333;
+    padding: 8px 12px;
 }
 
 
+.navmenu {
+    display:flex;
+    list-style: none;
+    padding-left:0;
+}
+.navmenu li{
+    padding:8px 70px;
+}
 
-
-#nav ul li a {
-  display: block;
+.menuicons {
+  list-style: none;
   color: #ddd;
-  padding: 18px 150px;
-  text-decoration: none;
-  font-size: 16px;
-}
+  display: flex;
 
-#nav ul li b {
+}
+.menuicons li{
+    padding: 8px 12px;
+}
+/*검색,로그인아이콘*/
+
+
+.inhatitle{
   display: block;
-  color: #ddd;
-  padding: 18px 50px;
-  text-decoration: none;
-  font-size: 16px;
-}
+  color:beige;
+  font-size: 24px;
+  list-style: none;
+}/*왼쪽위 제목*/
 
-li a:hover:not(.active) {
-  background-color: #232323;
+.navtooglebutton {
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color:aqua;
+  display:none;
+}/*토글버튼*/
+
+
+.navmenu li:hover{
+    background-color: #232323;
+    border-radius: 4px;
 }
-li b:hover:not(.active) {
-  background-color: #232323;
+.menuicons li:hover{
+    background-color: #232323;
+    border-radius: 4px;
 }
 
 
@@ -73,8 +91,6 @@ li b:hover:not(.active) {
   margin: 2.5%;
   float: left;
 }
-
-
 
 
 
@@ -134,27 +150,78 @@ p3 {
   margin: 0;
   max-width:1080px;
 }
+@media screen and (max-width:768px){
+  .navbar{
+    flex-direction: column;
+    align-items:flex-start;
+    padding: 8px 24px;
+  }
+  .navmenu{
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+    display:none
+  }
+  .navmenu li{
+    width:100%;
+    text-align:center;
+  }
 
+  .navtooglebutton{
+    display:block
+  }
+  .menuicons{
+    justify-content: center;
+    width:100%;
+    display:none;
+  }
+
+  .navmenu.active,
+  .menuicons.active{
+    display:flex;
+  }
+}
+
+@media (prefers-color-scheme:light) {
+  body{
+    background-color: black;
+    color:white;
+  }
+}
+@media (prefers-color-scheme:dark){
+  body{
+    background-color: black;
+    color: white;
+  }
+}
 
 </style>
+
 </head>
 <body>
 
 
-<div id="nav" style="background-color:#333; width 100% height: 30px;">
-
-<ul>
-  
-  <li><a href="링크">EX1</a></li>
-  <li><a href="링크">EX2</a></li>
-  <li><a href="링크">EX3</a></li>
-  <li><a href="링크">EX4</a></li>
-  <li style="float:right"> <b href="링크" style="float:right"> <i class="fa fa-user"></i></b></li>
-  <li style="float:right"> <b href="링크" style="float:right" > <i class="fa fa-fw fa-search"> </i></b></li>
-
-</ul>
-
+<nav class="navbar">
+    
+<div class="inhatitle">
+    <li href="#" onclick="goHome()">LocalHost:INHA</li>
 </div>
+ 
+<div class="navmenu">
+  <li><a href="링크">About&nbsp;Us</a></li>
+  <li><a href="링크">IHHA&nbsp;Bin&nbsp;Location</a></li>
+  <li><a href="링크">How&nbsp;to&nbsp;Recycle</a></li>
+  <li><a href="링크">Community</a></li>
+</div>
+<div class="menuicons">
+    <li style="float:right"> <href="링크" style="float:right"> <i class="fa fa-user"></i></li>
+  <li style="float:right"> <href="링크" style="float:right" > <i class="fa fa-fw fa-search"> </i></li>
+</div>
+  
+
+
+<a href="#" class="navtooglebutton"><i class="fa-solid fa-bars"></i></a>
+</nav>
 
  <div class="title">
  
