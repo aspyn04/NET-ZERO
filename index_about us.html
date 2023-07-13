@@ -1,1 +1,228 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<title> LocalHost:INHA </title>
+
+
+<head>
+    <script src="index.js" defer></script>
+    <script>
+        function goHome() {
+           window.location.href = "index2.html";
+         }
+     </script>
+<style>
+body {
+  margin:0;
+}
+
+
+/* 내비게이션 바 설정 */
+
+a{
+    text-decoration:none;
+    color: #ddd;
+    
+}
+
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#333;
+    padding: 8px 12px;
+}
+
+
+
+/*검색,로그인아이콘*/
+.navmenu {
+    display:flex;
+    list-style: none;
+    padding-left:0;
+}
+
+.navmenu li{
+    padding:8px 70px;
+}
+
+.menuicons {
+  list-style: none;
+  color: #ddd;
+  display: flex;
+
+}
+.menuicons li{
+    padding: 8px 12px;
+}
+
+
+/*왼쪽위 제목*/
+.inhatitle{
+  display: block;
+  color:beige;
+  font-size: 24px;
+  list-style: none;
+}
+
+
+
+/*토글버튼*/
+.navtooglebutton {
+  position: absolute;
+  right: 32px;
+  font-size: 24px;
+  color:aqua;
+  display:none;
+}
+
+
+.navmenu li:hover{
+    background-color: #232323;
+    border-radius: 4px;
+}
+.menuicons li:hover{
+    background-color: #232323;
+    border-radius: 4px;
+}
+
+
+    
+/* 텍스트 */
+h1 {
+  font-family: sans-serif;
+  text-align: center;
+  color: #4B4B4B;
+  font-size: 70px;
+  float: center;
+}
+p1 {
+  text-align: center;
+  color: #4B4B4B;
+  font-family: sans-serif;
+  font-size: 20px;
+}
+p2 {
+  font-family: sans-serif;
+   float: center;
+  color: black;
+  font-size: 50px;
+}
+p3 {
+  color: white;
+  font-size: 50px;
+    float: center;
+}
+
+/* 클래스 */
+.title {
+  background-color: #f1f1f1;
+  padding: 75px 0px;
+  text-align: center;
+  right: 0;
+  left: 0;
+  display: block;
+  z-index: 9999;
+  height: 230px;
+  width: 100%;
+  margin: 0;
+}
+
+
+
+.body {
+  background-color: white;
+  padding: 20mm 5mm;
+  text-align: center;
+  display: block;
+  z-index: 9999;
+  height: 100px;
+  background-color: white;
+  width: 100px;
+   float: center;
+  margin: 0;
+  max-width:1080px;
+}
+
+
+@media screen and (max-width:768px){
+  .navbar{
+    flex-direction: column;
+    align-items:flex-start;
+    padding: 8px 24px;
+  }
+  .navmenu{
+    flex-direction: column;
+    align-items: center;
+    width: 100%; 
+    display:none
+  }
+  .navmenu li{
+    width:100%;
+    text-align:center;
+  }
+
+  .navtooglebutton{
+    display:block
+  }
+  .menuicons{
+    justify-content: center;
+    width:100%;
+    display:none;
+  }
+
+  .navmenu.active,
+  .menuicons.active{
+    display:flex;
+  }
+}
+
+
+</style>
+
+</head>
+<body>
+
+
+
+<nav class="navbar">
+    
+<div class="inhatitle">
+    <li href="https://aspyn04.github.io/NET-ZERO/">Logo</li>
+</div>
+ 
+<div class="navmenu">
+  <li><a href="링크">About&nbsp;Us</a></li>
+  <li><a href="링크">Zero&nbsp;Waste&nbsp;Shop</a></li>
+  <li><a href="링크">Certification
+</a></li>
+  <li><a href="링크">Community</a></li>
+  <li><a href="링크">Others</a></li>
+</div>
+<div class="menuicons">
+    <li style="float:right"> <href="링크" style="float:right"> <i class="fa fa-user"></i></li>
+  <li style="float:right"> <href="링크" style="float:right" > <i class="fa fa-fw fa-search"> </i></li>
+</div>
+  
+
+
+<a href="#" class="navtooglebutton"><i class="fa-solid fa-bars"></i></a>
+</nav>
+
+
+   
+<div class="data1">
+</div>
+
+<div class="data1">
+</div>
+
+
+
+</body>
+</html>
