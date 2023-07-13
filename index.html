@@ -19,11 +19,18 @@ body {
 
 
 /* 내비게이션 바 설정 */
+
 a{
     text-decoration:none;
     color: #ddd;
+    
 }
+
+
 .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,11 +39,14 @@ a{
 }
 
 
+
+/*검색,로그인아이콘*/
 .navmenu {
     display:flex;
     list-style: none;
     padding-left:0;
 }
+
 .navmenu li{
     padding:8px 70px;
 }
@@ -50,23 +60,26 @@ a{
 .menuicons li{
     padding: 8px 12px;
 }
-/*검색,로그인아이콘*/
 
 
+/*왼쪽위 제목*/
 .inhatitle{
   display: block;
   color:beige;
   font-size: 24px;
   list-style: none;
-}/*왼쪽위 제목*/
+}
 
+
+
+/*토글버튼*/
 .navtooglebutton {
   position: absolute;
   right: 32px;
   font-size: 24px;
   color:aqua;
   display:none;
-}/*토글버튼*/
+}
 
 
 .navmenu li:hover{
@@ -87,9 +100,9 @@ a{
   text-align: center;
   display: block;
   height: 1000px;
-  width: 45%;
+  width: 95%;
   margin: 2.5%;
-  float: left;
+  float: center;
 }
 
 
@@ -150,6 +163,8 @@ p3 {
   margin: 0;
   max-width:1080px;
 }
+
+
 @media screen and (max-width:768px){
   .navbar{
     flex-direction: column;
@@ -182,18 +197,6 @@ p3 {
   }
 }
 
-@media (prefers-color-scheme:light) {
-  body{
-    background-color: black;
-    color:white;
-  }
-}
-@media (prefers-color-scheme:dark){
-  body{
-    background-color: black;
-    color: white;
-  }
-}
 
 </style>
 
@@ -201,17 +204,20 @@ p3 {
 <body>
 
 
+
 <nav class="navbar">
     
 <div class="inhatitle">
-    <li href="#" onclick="goHome()">LocalHost:INHA</li>
+    <li href="https://aspyn04.github.io/NET-ZERO/">Logo</li>
 </div>
  
 <div class="navmenu">
   <li><a href="링크">About&nbsp;Us</a></li>
-  <li><a href="링크">IHHA&nbsp;Bin&nbsp;Location</a></li>
-  <li><a href="링크">How&nbsp;to&nbsp;Recycle</a></li>
+  <li><a href="링크">Zero&nbsp;Waste&nbsp;Shop</a></li>
+  <li><a href="링크">Certification
+</a></li>
   <li><a href="링크">Community</a></li>
+  <li><a href="링크">Others</a></li>
 </div>
 <div class="menuicons">
     <li style="float:right"> <href="링크" style="float:right"> <i class="fa fa-user"></i></li>
@@ -239,4 +245,5 @@ p3 {
 
 
 </body>
+</html>
 </html>
